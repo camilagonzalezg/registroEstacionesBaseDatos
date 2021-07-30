@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RegistroEstacionesBD.DAL
 {
-    class RegionDAL
+    public class RegionDAL
     {
     }
 }

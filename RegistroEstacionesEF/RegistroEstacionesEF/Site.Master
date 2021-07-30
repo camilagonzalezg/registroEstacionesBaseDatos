@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RegistroEstaciones.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Registro de Estaciones y Puntos de Carga</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--CSS BOOTSTRAP 5--%>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-success bg-gradient text-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Default.aspx">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Estaciones de Servicio
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="VerEstacionesServicio.aspx">Ver Estaciones de Servicio</a></li>
+                                    <li><a class="dropdown-item" href="RegistrarEstacionServicio.aspx">Registrar Estaciones de Servicio</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Puntos de Carga
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="VerPuntosCarga.aspx">Ver Puntos de Carga</a></li>
+                                    <li><a class="dropdown-item" href="RegistrarPuntosCarga.aspx">Registrar Puntos de Carga</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="Contenido" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </main>
+    <footer class="container-fluid bg-success bg-gradient text-white pt-2 pb-2">
+        <div class="row">
+            <div class="col-12 text-white text-center">
+                <h5>Ante cualquier duda, contactar a <a href="#">info@registroestaciones.cl</a></h5>
+            </div>
+        </div>
+    </footer>
+    <%--JS BOOTSTRAP 5--%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
