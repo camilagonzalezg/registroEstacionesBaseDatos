@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RegistroEstacionesBD;
+using RegistroEstacionesBD.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +11,6 @@ namespace RegistroEstacionesEF
 {
     public partial class ActualizarPuntosCarga : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

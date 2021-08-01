@@ -100,13 +100,13 @@ namespace RegistroEstacionesBD.DAL
         new Region()
         {
             Nombre = "Aysén del General Carlos Ibáñez del Campo",
-            Codigo = "14"
+            Codigo = "15"
         },
 
         new Region()
         {
             Nombre = "Magallanes y la Antártica Chilena",
-            Codigo = "15"
+            Codigo = "16"
         }
     };
 

@@ -11,7 +11,7 @@
           </Key>
           <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="CapacidadMaxima" Type="int" Nullable="false" />
-          <Property Name="Region" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="PuntoCarga">
           <Key>
@@ -30,7 +30,7 @@
           <Property Name="Nombre" Type="varchar" MaxLength="100" />
         </EntityType>
         <Association Name="fk_estacionservicio_region">
-          <End Role="Region" Type="Self.Region" Multiplicity="1" />
+          <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
           <End Role="EstacionServicio" Type="Self.EstacionServicio" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Region">
@@ -61,7 +61,7 @@
           </Key>
           <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CapacidadMaxima" Type="Int32" Nullable="false" />
-          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Region1" Relationship="Self.fk_estacionservicio_region" FromRole="EstacionServicio" ToRole="Region" />
         </EntityType>
         <EntityType Name="PuntoCarga">
@@ -82,7 +82,7 @@
           <NavigationProperty Name="EstacionServicio" Relationship="Self.fk_estacionservicio_region" FromRole="Region" ToRole="EstacionServicio" />
         </EntityType>
         <Association Name="fk_estacionservicio_region">
-          <End Role="Region" Type="Self.Region" Multiplicity="1" />
+          <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
           <End Role="EstacionServicio" Type="Self.EstacionServicio" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Region">
@@ -152,7 +152,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

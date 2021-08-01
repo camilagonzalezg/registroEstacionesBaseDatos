@@ -45,5 +45,19 @@ namespace RegistroEstacionesBD.DAL
 
         }
 
+        //METODO UPDATE
+        public void Update(PuntoCarga p)
+        {
+            PuntoCarga pOriginal = this.dbEntities.PuntoCarga.Find(p.Id);
+            pOriginal.Id = p.Id;
+            pOriginal.Tipo = p.Tipo;
+            pOriginal.CapacidadMaxima = p.CapacidadMaxima;
+            pOriginal.FechaVencimiento = p.FechaVencimiento;
+
+            //commit
+            this.dbEntities.SaveChanges();
+        }
     }
 }
+
+
